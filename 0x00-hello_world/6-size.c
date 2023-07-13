@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  * main -A program that print a line using printf function
- * Return 0(success)
+ * Return: 0(success)
  */
 int main(void)
 {
@@ -15,6 +15,8 @@ printf("Size of a int:%lu byte(s)\n"(unsigned long)sizeof(b));
 printf("Size of a long int:%lu byte(s)\n"(unsigned long)sizeof(c));
 printf("Size of a long long int:%lu byte(s)\n"(unsigned long)sizeof(d));
 printf("Size of a float:%lu byte(s)\n"(unsigned long)sizeof(f));
+/* Program execution completed successfully*/
+
 return (0);
 }
 
