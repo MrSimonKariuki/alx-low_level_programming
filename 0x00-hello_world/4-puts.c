@@ -8,4 +8,3 @@ int main(void)
 puts("\"Progmming is like building a multilingual puzzle");
 return (0);
 }
-
