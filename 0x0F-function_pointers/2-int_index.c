@@ -1,15 +1,22 @@
 #include "function_pointers.h"
-#include <stdio.h>
 /**
- * print_name - print name using pointer to function
- * @name: string to add
- * @f: pointer to function
- * Return: nothing
- **/
-void print_name(char *name, void (*f)(char *))
+ * int_index - return index place if comparison = true, else -1
+ * @array: array
+ * @size: size of elements in array
+ * @cmp: pointer to func of one of the 3 in main
+ * Return: 0
+ */
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	if (name == NULL || f == NULL)
-		return;
+	int i;
 
-	f(name);
+	if (array == NULL || size <= 0 || cmp == NULL)
+		return (-1);
+
+	for (i = 0; i < size; i++)
+	{
+		if (cmp(array[i]))
+			return (i);
+	}
+	return (-1);
 }
