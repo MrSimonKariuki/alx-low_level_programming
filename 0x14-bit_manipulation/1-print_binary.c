@@ -1,11 +1,8 @@
-/*
- * This program defines a function that prints the binary equivalent
- * of a decimal number. It uses bitwise operations to extract each bit
- * and print '1' or '0' accordingly.
- */
-
 #include "main.h"
-
+/**
+ * print_binary - prints the binary equivalent of a decimal number
+ * @n: number to print in binary
+ */
 void print_binary(unsigned long int n)
 {
 int i, count = 0;
@@ -17,15 +14,12 @@ current = n >> i;
 
 if (current & 1)
 {
-putchar('1');
+_putchar('1');
 count++;
 }
 else if (count)
-{
-putchar('0');
+_putchar('0');
 }
-}
-
 if (!count)
-putchar('0');
+_putchar('0');
 }
